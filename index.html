@@ -1390,17 +1390,7 @@
         });
 
         // Enhanced about content paragraphs animation
-        document.querySelectorAll('.about-content p').forEach((p, index) => {
-            p.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateX(15px)';
-                this.style.color = 'var(--primary-color)';
-            });
-            
-            p.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateX(0)';
-                this.style.color = 'var(--text-light)';
-            });
-        });
+
 
         // Add breathing animation to WhatsApp button
         const whatsappBtn = document.querySelector('.whatsapp-float');
@@ -1414,3 +1404,4 @@
 </body>
 
 </html>
+
