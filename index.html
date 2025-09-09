@@ -674,6 +674,100 @@
                 font-size: 1.6rem;
             }
         }
+         .stats-section {
+            background: var(--gradient-primary);
+            padding: 60px 0;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stats-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .stats-image {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .stats-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .stats-image img:hover {
+            transform: scale(1.02);
+        }
+        
+        .stats-items {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .counter {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        
+        .stat-item h5 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--secondary-color);
+        }
+        
+        .section-title h2 {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #666;
+        }
+        
+        @media (max-width: 992px) {
+            .stats-content {
+                flex-direction: column;
+            }
+            
+            .stats-image, .stats-items {
+                width: 100%;
+                padding: 10px;
+            }
+            
+            .counter {
+                font-size: 2.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -804,31 +898,38 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="section-padding" style="background: var(--gradient-primary);">
+   <section class="stats-section">
         <div class="container">
-            <div class="row text-center text-white">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div>
-                        <div class="counter">40</div>
-                        <h5>عام من الخبرة</h5>
-                    </div>
+            <div class="stats-content">
+                <div class="stats-image">
+                    <img src="map.jpeg" alt="خريطة العالم">
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div>
-                        <div class="counter">3</div>
-                        <h5>قارات </h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div>
-                        <div class="counter">3</div>
-                        <h5>قطاعات رئيسية</h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div>
-                        <div class="counter">100</div>
-                        <h5>% التزام بالجودة</h5>
+                <div class="stats-items">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="stat-item">
+                                <div class="counter">40</div>
+                                <h5>عام من الخبرة</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="stat-item">
+                                <div class="counter">5</div>
+                                <h5>قارات حول العالم</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="stat-item">
+                                <div class="counter">3</div>
+                                <h5>قطاعات رئيسية</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="stat-item">
+                                <div class="counter">100</div>
+                                <h5>% التزام بالجودة</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
